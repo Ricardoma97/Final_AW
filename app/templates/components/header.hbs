@@ -1,12 +1,28 @@
-<div class="main-header column">
-	<div class="name-instructions column">
-		<h1>Rock, paper, scissors, lizard, spock</h1>
-		<div class="help row">
-			<img class="icon" src="https://image.flaticon.com/icons/svg/0/827.svg">
-			<h2>See instructions here</h2>
+<div>
+	<div class="main-header column">
+		<div class="name-instructions column">
+			<h1>Rock, paper, scissors, lizard, spock</h1>
+			<div class="help row">
+				<img class="icon" src="https://image.flaticon.com/icons/svg/0/827.svg">
+				<h2>See instructions here</h2>
+			</div>
 		</div>
-	</div>
-	<div>
-		<button class="new-button" type="button">Create new game</button>
+		<div>
+			
+			<div class="dropdown">
+	  			<button class="dropbtn">Select a user</button>
+	  			<div class="dropdown-content">
+				    {{log users}}
+				    {{#each @users as |user|}}
+				    	<NewGamedata @data={{user}}/>
+				    {{else}}
+				    	<a>no hay users</a>
+				    	<a>D:</a>
+				    	<a></a>
+				    {{/each}}
+	  			</div>
+  				<button class="new-button" type="button">Create new game</button>
+			</div>
+		</div>
 	</div>
 </div>

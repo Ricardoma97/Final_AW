@@ -1,8 +1,9 @@
 import DS from 'ember-data';
-const { Model } = DS;
+
+const { Model, attr } = DS;
 
 export default class GameModel extends Model {
-	@attr('number') id;
+	//@attr('number') id;
 	@attr('string') code;
 	@attr('string') status;
 	@attr('string') winner_name;

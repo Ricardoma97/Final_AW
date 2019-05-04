@@ -1,15 +1,18 @@
 <div class="game-feed">
 	<div class="user column">
-		<div class="dropdown">
-  			<button class="dropbtn">Select a user</button>
-  			<div class="dropdown-content">
-			    <a>Ariana</a>
-			    <a>Ricardo</a>
-			    <a>Yvone</a>
-  			</div>
-		</div>
 	</div>
 	<div class="games-box">
-		<GameCard/>
+		{{#each @games as |game|}}
+
+		<GameCard 
+			@data={{game}}
+		/>
+
+	{{else}}
+		<GameCard />
+		{{!-- TODO: empty state --}}
+		<p>No hay tweets</p>
+
+	{{/each}}
 	</div>
 </div>
