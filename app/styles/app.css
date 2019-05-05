@@ -2,6 +2,7 @@
 html, body {
 	margin: 0px;
 	padding: 0px;
+	height: 100%;
 }
 
 @import "ember-basic-dropdown";
@@ -25,6 +26,11 @@ body {
 	margin: 0px;
 }
 
+.main-header h2 {
+	font-size: 1.5em;
+	margin: 0px;
+}
+
 .name-instructions {
 	width: 50%;
 	
@@ -37,17 +43,23 @@ body {
 	justify-content: center;
 }
 
-/* Materialize
-.row {
+
+.app-row {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 }
- */
+ 
 .help {
 	width: 100%;
 	font-family: "Annie Use Your Telescope";
+	display: flex;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	margin: 3%;
 
 }
 
@@ -122,3 +134,89 @@ body {
   background-color: #DAB49D;
 }
 
+.font-card {
+	font-family: 'Coming Soon';
+}
+
+.games-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.margin-2 {
+	margin: 2%;
+}
+
+.padding-2 {
+	padding: 3%;
+}
+
+.game-info {
+	width: 35%;
+	text-align: center;
+	background-color: #e39038;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-info button {
+	font-family: "Coming Soon";
+}
+
+.game-info h1 {
+	font-size: 2em;
+	margin: 0px;
+	font-family: "Annie Use Your Telescope";
+}
+
+.game-info hr {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F3E9DC;
+	margin-top: 1%;
+	margin-bottom:1%; 
+	height: 0.2px;
+	border: 0 none;
+
+}
+
+.game h1 {
+	font-size: 2em;
+
+}
+
+.game {
+	height: 100%;
+	width: 65%;
+	background-color: #F3E9DC;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 2%;
+}
+
+.game h1 {
+	font-size: 2em;
+	margin: 0px;
+	font-family: "Annie Use Your Telescope";
+}
+
+.users {
+	display: flex;
+	flex-direction: row;
+	padding: 2%;
+	font-family: 'Coming Soon';
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.choose button {
+	width: 100%;
+	margin: 2%;
+}
