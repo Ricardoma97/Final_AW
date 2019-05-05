@@ -1,2 +1,7 @@
-<Header @users={{this.model.users}}/>
-<GameFeed @games={{this.model.games}}/>
+<Header/>
+<GameFeed 
+	@games={{this.model.games}} 
+	@users={{this.model.users}} 
+	@joinGame={{this.joinGame}}
+	@submitGame={{this.submitGame}}
+@/>

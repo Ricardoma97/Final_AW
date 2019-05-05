@@ -1,4 +1,20 @@
-<h1>This is the game view</h1>
-<h3>Here goes the game info</h3>
-<h3>Here goes the game board</h3>
-	 
+<div class="app-row">
+	<div class="game-info">
+		<button class="back btn-small waves-effect waves-light brown darken-2">Go back</button>
+		<div class="section">
+			<h1>Game id	{{game}}</h1>
+		</div>
+		<hr>
+		<div class="section">
+			<h1>To play the game press start!</h1>
+		</div>
+		<button class="waves-effect waves-light font-card brown darken-2 btn">Start!</button>
+	</div>
+	<div class="game">
+		<h1>Select rock, paper, scissors, lizard or spock!</h1>
+		<div class="users">
+			<PlayerCard/>
+			<PlayerCard/>
+		</div>
+	</div>
+</div>

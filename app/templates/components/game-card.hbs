@@ -1,25 +1,37 @@
 <div class="game-card">
 	<div class="row">
 		<div class="col s6">
-			<div class="card orange lighten-3 card-content">
-				
-					
-					<header class="game-name">
-						<span class="card-title">Gamecode: {{@data.code}}</span>
-					</header>
-					<div class="game-id">
-						<hr>
-						<span class="card-title">Players: {{@data.total_users}}</span>
-						{{#if  @data.winner_name}}
-							<p>Winner: {{ @data.winner_name }}</p>
-						{{else}}
-							<p>Winner: Pending </p>
-						{{/if}}
-					</div>
-					<button class="btn waves-effect waves-light orange" type="submit" name="action">Join game!
-    					<i class="material-icons right">send</i>
-  					</button>
-				
+			<div class="card orange lighten-3 card-content hoverable">
+				<header class="game-name">
+					<span class="card-title">Gamecode: {{@data.code}}</span>
+				</header>
+				<div class="game-id">
+					<hr>
+					<span class="card-title">Players: {{@data.total_users}}</span>
+				</div>
+					{{#if (dif @data.total_users)}}
+				<button class="btn waves-effect waves-light orange" 
+					{{action @joinGame @user @data.id}}
+				>Join game!
+					<i class="material-icons right">send</i>
+					</button>
+					{{/if}}
+					{{#if (ready @data.status)}}
+				<button class="btn waves-effect waves-light orange" 
+				>Play!
+					<i class="material-icons right">send</i>
+					</button>
+					{{/if}}
+					{{#if (rts @data.status @data.total_users)}}
+				<button class="btn waves-effect waves-light orange" 
+					{{action}}
+				>Start Game!
+					<i class="material-icons right">send</i>
+					</button>
+					{{/if}}
+					{{#if (completed @data.status)}}
+						<p>Winner: {{ @data.winner_name }}</p>
+					{{/if}}
 			</div>
 		</div>
 	</div>

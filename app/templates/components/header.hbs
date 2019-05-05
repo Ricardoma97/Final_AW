@@ -7,20 +7,6 @@
 				<h2>See instructions here</h2>
 			</div>
 		</div>
-		<div>
-			
-			<div class="dropdown">
-	  			<div class="dropdown-content">
-				    
-				    {{#each @users as |user|}}
-				    	<NewGame @data={{user}}/>
-				    	{{log user.id user.username}}
-				    {{else}}
-				    	<li>no hay users</li>
-				    {{/each}}
-	  			</div>
-  				<button class="new-button" type="button">Create new game</button>
-			</div>
-		</div>
+		
 	</div>
 </div>
