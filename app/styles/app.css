@@ -4,6 +4,8 @@ html, body {
 	padding: 0px;
 }
 
+@import "ember-basic-dropdown";
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -35,13 +37,14 @@ body {
 	justify-content: center;
 }
 
+/* Materialize
 .row {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
-
+ */
 .help {
 	width: 100%;
 	font-family: "Annie Use Your Telescope";
@@ -118,6 +121,4 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #DAB49D;
 }
-
-
 

@@ -1,15 +1,26 @@
 <div class="game-card">
-
-	<header class="game-name">
-		<h3>Game name</h3>
-	</header>
-
-	<div class="game-id">
-		<p>#091298</p>
-		<hr>
-		<h1>Players: 1</h1>
+	<div class="row">
+		<div class="col s6">
+			<div class="card orange lighten-3 card-content">
+				
+					
+					<header class="game-name">
+						<span class="card-title">Gamecode: {{@data.code}}</span>
+					</header>
+					<div class="game-id">
+						<hr>
+						<span class="card-title">Players: {{@data.total_users}}</span>
+						{{#if  @data.winner_name}}
+							<p>Winner: {{ @data.winner_name }}</p>
+						{{else}}
+							<p>Winner: Pending </p>
+						{{/if}}
+					</div>
+					<button class="btn waves-effect waves-light orange" type="submit" name="action">Join game!
+    					<i class="material-icons right">send</i>
+  					</button>
+				
+			</div>
+		</div>
 	</div>
-
-	<button class="join-button">Join game!</button>
-
 </div>
