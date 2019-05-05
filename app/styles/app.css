@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Coming+Soon|Gugi|Indie+Flower|Modak|Monofett|Press+Start+2P|Roboto');
+
 html, body {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
 }
-
-@import "ember-basic-dropdown";
 
 body {
 	display: flex;
@@ -66,6 +65,12 @@ body {
 .icon {
 	width: 6%;
 	margin-right: 2%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.icon:hover {
+	opacity: 0.4;
 }
 
 .new-button {
