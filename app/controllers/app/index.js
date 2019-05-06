@@ -18,8 +18,7 @@ export default class AppIndexController extends Controller {
 				game_id:game,
 				choise: null
 			});
-			join.save().then(console.log("exito"));
-			this.transitionToRoute('RPSLSgame',{queryParams:{game_id: game }});
+			join.save().then(console.log("exito")).then(this.transitionToRoute('app.game',{queryParams:{game_id: game }}));
 		}
 	@action
 		startGame(game){
@@ -29,10 +28,11 @@ export default class AppIndexController extends Controller {
 			play.set('status', "2");
 			console.log(play.status)
 			play.save();
+			this.transitionToRoute('/'+game+'?id='+game);
 		}
 	@action
-		@action
 		playGame(game){
-			//this.transitionToRoute('RPSLSgame',{queryParams:{game_id: game }});
+			console.log(game);
+			this.transitionToRoute('/'+game+'?id='+game);
 		}
 }

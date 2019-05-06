@@ -2,12 +2,16 @@ import Route from '@ember/routing/route';
 import { hash } from 'rsvp';
 
 export default class AppGameRoute extends Route {
-	model () {
-		// return this.store.query('tweet', { user_id: 1 });
-		// return this.store.findAll('tweet');
+	model (params) {
 		return hash({
-			//plays: this.store.query('play',{user_id: params.user_id}),
-			//game: this.store.peekRecord('game',{game_id : params.game_id})
+			// plays: this.store.findAll('play'),
+			// games: this.store.findAll('game'), 
+			// users: this.store.findAll('user'),
+			users: this.store.findAll('user'),
+			plays: this.store.query('play', { game_id: params.game_id }),
+			game: this.store.findRecord('game', params.game_id),
+			returnqueryParams:{ user_id: {refreshModel:true}}
 		})
+		
 	}
 }

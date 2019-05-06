@@ -1,14 +1,34 @@
 <div class="app-row">
 	<div class="game-info">
-		<button class="back btn-small waves-effect waves-light brown darken-2">Go back</button>
+		{{#link-to 'app'}}<button class="back btn-small waves-effect waves-light brown darken-2" text>Go back</button>{{/link-to}}
 		<div class="section">
-			<h1>Game id	{{game}}</h1>
+			<h1>Game id	{{id}}</h1>
+			<button {{action this.StartGame id}}> START</button>
 		</div>
 		<hr>
-		<div class="section">
-			<h1>To play the game press start!</h1>
-		</div>
-		<button class="waves-effect waves-light font-card brown darken-2 btn">Start!</button>
+	</div>
+	<div> 
+			{{log this.model.plays}}
+			{{#each this.model.plays as |play|}}
+				{{#if (play-game this.id play.game_id)}}
+					<h1>Play {{play.id}}</h1>
+					<p>Game {{play.game_id}}</p>
+					<p>User:{{play.user_id}}</p>
+					{{#unless play.choice}}
+						{{play.id}}
+						<button {{action this.PlayGame play.id 1}}>ROCK</button>
+						<button {{action this.PlayGame play.id 2}}>PAPER</button>
+						<button {{action this.PlayGame play.id 3}}>SCISSORS</button>
+						<button {{action this.PlayGame play.id 4}}>LIZARD</button>
+						<button {{action this.PlayGame play.id 5}}>SPOCK</button>
+					{{else}}
+						<p>choise: {{play.choice}} </p>
+					{{/unless}}
+				{{/if}}
+			{{else}}
+			{{!-- TODO: empty state --}}
+			<p>No hay tweets</p>
+			{{/each}}
 	</div>
 	<div class="game">
 		<h1>Select rock, paper, scissors, lizard or spock!</h1>
