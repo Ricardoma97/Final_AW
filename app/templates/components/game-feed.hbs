@@ -1,5 +1,5 @@
 <div class="game-feed">
-	
+							    	{{log this.state.selectedOption}}
 	<div class="input-field col s12">
 					<div>
 						<label>User:</label>
@@ -7,7 +7,6 @@
 	  				<select id="select-user" onchange={{action "setSelection" value="target.value"}}>
 						    {{#each @users as |user|}}
 						    	<NewGame @data={{user}}/>
-						    	{{log user.id user.username}}
 						    {{else}}
 						    	<option>no hay users</option>
 						    {{/each}}
@@ -26,6 +25,9 @@
 			@data={{game}}
 			@joinGame={{@joinGame}}
 			@user={{this.state.selectedOption}}
+			@startGame={{@startGame}}
+			@playGame={{@playGame}}
+
 		/>
 		{{else}}
 			<GameCard />

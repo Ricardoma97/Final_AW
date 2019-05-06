@@ -4,6 +4,8 @@
 			<div class="card orange lighten-3 card-content hoverable">
 				<header class="game-name">
 					<span class="card-title">Gamecode: {{@data.code}}</span>
+					<span class="card-title">Game id: {{@data.id}}</span>
+					<span class="card-title">Status: {{@data.status}}</span>
 				</header>
 				<div class="game-id">
 					<hr>
@@ -18,13 +20,14 @@
 					{{/if}}
 					{{#if (ready @data.status)}}
 				<button class="btn waves-effect waves-light orange" 
+					{{action @playGame @data.id}}
 				>Play!
 					<i class="material-icons right">send</i>
 					</button>
 					{{/if}}
 					{{#if (rts @data.status @data.total_users)}}
 				<button class="btn waves-effect waves-light orange" 
-					{{action}}
+					{{action @startGame @data.id}}
 				>Start Game!
 					<i class="material-icons right">send</i>
 					</button>

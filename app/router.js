@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('app', {path: '/'}, function() {
     this.route('game', {path: '/:game_id'});
   });
+  this.route('RPSLSgame', {path: '/RPSLSgame?game_id:'});
 });
 
 export default Router;

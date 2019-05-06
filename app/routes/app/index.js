@@ -6,7 +6,7 @@ export default class AppIndexRoute extends Route {
 		// return this.store.query('tweet', { user_id: 1 });
 		// return this.store.findAll('tweet');
 		return hash({
-			//plays: this.store.findAll('play'),
+			plays: this.store.findAll('play'),
 			games: this.store.findAll('game'), 
 			users: this.store.findAll('user') 
 		})
