@@ -35,7 +35,11 @@
 					</button>
 					{{/if}}
 					{{#if (completed @data.status)}}
-						<p>Winner: {{ @data.winner_name}}    Numero de usuario: {{@data.winner_id}}</p>
+						{{#if @data.winner_id}}
+							<p>Winner: {{ @data.winner_name}}    Numero de usuario: {{@data.winner_id}}</p>
+						{{else}}
+							<p>Draw</p>
+						{{/if}}
 					{{/if}}
 			</div>
 		</div>
