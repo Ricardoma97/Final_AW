@@ -1,6 +1,7 @@
 <div class="game-feed">
 							    	{{log this.state.selectedOption}}
 	<div class="input-field col s12">
+			<div id=>
 					<div>
 						<label>User:</label>
 					</div>
@@ -15,10 +16,11 @@
 	  				<button {{action @submitGame this.state.selectedOption}} class="btn orange hoverable">Create game!<i class="material-icons right">create</i>
 	  				</button>
 					</div>
+			</div>
 	</div>		
 		
 	
-	<div class="games-box">
+	<div class="games-box center">
 		{{#each @games as |game|}}
 
 		<GameCard 
