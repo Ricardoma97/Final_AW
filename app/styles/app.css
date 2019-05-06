@@ -84,7 +84,7 @@ body {
 	text-align: center;
 	padding-left: 3.75%;
 }
-/*
+
 .help {
 	width: 100%;
 	font-family: "Annie Use Your Telescope";
@@ -96,6 +96,14 @@ body {
 	margin-right: 2%;
 }
 
+
+.user {
+	padding: 2%;
+	justify-content: left;
+	align-items: left;
+}
+
+/*
 .new-button {
 	background-color: #F3E9DC;
 	border: none;
@@ -108,18 +116,12 @@ body {
 	font-family: "Coming Soon"
 
 }
-
 .new-button:hover {
 	box-shadow: 0 0.5em 0.6em 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .dropdown-content {
 	width: 100%;
-}
-.user {
-	padding: 2%;
-	justify-content: left;
-	align-items: left;
 }
 
 
@@ -367,6 +369,7 @@ body {
 	font-family: 'Coming Soon';
 	margin-top: auto;
 	margin-bottom: auto;
+	justify-content: center;
 }
 
 .choose button {
@@ -382,4 +385,22 @@ body {
 }
 #rgt{
 	width: 30%;
+}
+
+.game span {
+	color: white;
+}
+
+
+.card-fix {
+	padding: 2%;
+	margin: 2%;
+}
+
+.padding-card {
+	padding: 2%;
+}
+
+.margin-card {
+	margin: 2%;
 }

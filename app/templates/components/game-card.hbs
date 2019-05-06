@@ -1,7 +1,7 @@
-<div class="game-card">
+<div class="game-card center font-card">
 	<div class="row">
-		<div class="col s6">
-			<div class="card orange lighten-3 card-content hoverable">
+		<div class="col s10 offset-s1">
+			<div class="card orange lighten-3 card-content hoverable padding-card">
 				<header class="game-name">
 					<span class="card-title">Gamecode: {{@data.code}}</span>
 					<span class="card-title">Game id: {{@data.id}}</span>
@@ -12,14 +12,14 @@
 					<span class="card-title">Players: {{@data.total_users}}</span>
 				</div>
 					{{#if (dif @data.total_users)}}
-				<button class="btn waves-effect waves-light orange" 
+				<button class="btn waves-effect waves-light orange font-card padding-card margin-card" 
 					{{action @joinGame @user @data.id}}
 				>Join game!
 					<i class="material-icons right">send</i>
 					</button>
 					{{/if}}
 					{{#if (ready @data.status)}}
-						<button class="btn waves-effect waves-light orange" 
+						<button class="btn waves-effect waves-light orange margin-card padding-card font-card" 
 
 						{{action @playGame @data.id}}
 						
@@ -28,7 +28,7 @@
 						</button>
 					{{/if}}
 					{{#if (rts @data.status @data.total_users)}}
-				<button class="btn waves-effect waves-light orange" 
+				<button class="btn waves-effect waves-light orange font-card margin-card" 
 					{{action @startGame @data.id}}
 				>Start Game!
 					<i class="material-icons right">send</i>
