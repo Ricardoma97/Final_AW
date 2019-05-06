@@ -356,13 +356,23 @@ body {
 .users {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	padding: 2%;
 	font-family: 'Coming Soon';
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
+.game span {
+	color: white;
+}
+
 .choose button {
 	width: 100%;
+	margin: 2%;
+}
+
+.card-fix {
+	padding: 2%;
 	margin: 2%;
 }

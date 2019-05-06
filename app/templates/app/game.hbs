@@ -3,38 +3,36 @@
 		{{#link-to 'app'}}<button class="back btn-small waves-effect waves-light brown darken-2" text>Go back</button>{{/link-to}}
 		<div class="section">
 			<h1>Game id	{{id}}</h1>
-			<button {{action this.StartGame id}}> START</button>
 		</div>
 		<hr>
-	</div>
-	<div> 
-			{{log this.model.plays}}
-			{{#each this.model.plays as |play|}}
-				{{#if (play-game this.id play.game_id)}}
-					<h1>Play {{play.id}}</h1>
-					<p>Game {{play.game_id}}</p>
-					<p>User:{{play.user_id}}</p>
-					{{#unless play.choice}}
-						{{play.id}}
-						<button {{action this.PlayGame play.id 1}}>ROCK</button>
-						<button {{action this.PlayGame play.id 2}}>PAPER</button>
-						<button {{action this.PlayGame play.id 3}}>SCISSORS</button>
-						<button {{action this.PlayGame play.id 4}}>LIZARD</button>
-						<button {{action this.PlayGame play.id 5}}>SPOCK</button>
-					{{else}}
-						<p>choise: {{play.choice}} </p>
-					{{/unless}}
-				{{/if}}
-			{{else}}
-			{{!-- TODO: empty state --}}
-			<p>No hay tweets</p>
-			{{/each}}
 	</div>
 	<div class="game">
 		<h1>Select rock, paper, scissors, lizard or spock!</h1>
 		<div class="users">
-			<PlayerCard/>
-			<PlayerCard/>
+			{{log this.model.plays}}
+			{{#each this.model.plays as |play|}}
+				<div class="card blue-grey darken-1 card-fix">
+					{{#if (play-game this.id play.game_id)}}
+					<span class="card-title">Play {{play.id}}</span>
+					<p>User:{{play.user_id}}</p>
+					{{#unless play.choice}}
+						<div class="card-action choose">
+							<p>Choose:</p>
+							<button class="btn-small waves-effect waves-light orange accent-2 font-card" {{action this.PlayGame play.id 1}}>ROCK</button>
+							<button class="btn-small waves-effect waves-light orange accent-2 font-card" {{action this.PlayGame play.id 2}}>PAPER</button>
+							<button class="btn-small waves-effect waves-light orange accent-2 font-card" {{action this.PlayGame play.id 3}}>SCISSORS</button>
+							<button class="btn-small waves-effect waves-light orange accent-2 font-card" {{action this.PlayGame play.id 4}}>LIZARD</button>
+							<button class="btn-small waves-effect waves-light orange accent-2 font-card" {{action this.PlayGame play.id 5}}>SPOCK</button>
+						</div>
+					{{else}}
+						<p>choise: {{play.choice}} </p>
+					{{/unless}}
+					{{/if}}
+				</div>
+			{{else}}
+			{{!-- TODO: empty state --}}
+			<p>No hay tweets</p>
+			{{/each}}
 		</div>
 	</div>
 </div>
